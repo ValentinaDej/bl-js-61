@@ -78,4 +78,16 @@ if (time >= 0 && time < 15) {
 ? [30 до 45) – третя чверть години
 ? [45 до 60) – четверта чверть години
 */
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+// const genres = ["Jazz", "Blues", "rock'n'roll", "Country", "Reggy"];
+// let smallestWord = genres[0];
+
+// for (const word of genres) {
+//   if (word.length < smallestWord.length) {
+//     smallestWord = word;
+//   }
+// }
+// console.log(smallestWord);
 >>>>>>> Stashed changes

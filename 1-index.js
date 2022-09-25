@@ -92,12 +92,33 @@
 // const managerSalaries = [1000, 1500, 2500, 4000, 5000];
 // const developersSalaries = [8000, 15000, 40000];
 
-const managerSalaries = [1000, 1500, 2500, 4000, 5000];
-const developersSalaries = [8000, 15000, 40000];
-const newSalery = developersSalaries.concat(managerSalaries);
-console.log(newSalery);
-let total = 0;
-for (const salery of newSalery) {
-  total += salery;
-}
-console.log(total);
+// const managerSalaries = [1000, 1500, 2500, 4000, 5000];
+// const developersSalaries = [8000, 15000, 40000];
+// const newSalery = developersSalaries.concat(managerSalaries);
+// console.log(newSalery);
+// let total = 0;
+// for (const salery of newSalery) {
+//   total += salery;
+// }
+// console.log(total);
+
+/*
+? Напишіть функцію calcAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення.
+? За умови, що усі аругменти будуть лише числами.
+? Додай перевірку, що аргументами можуть бути не числа
+*/
+function calcAverage() {
+    let total = 0;
+    let count = 0;
+
+    for (const argument of arguments){
+        if (typeof argument !== "number") {
+            continue
+        }
+        console.log(typeof argument)
+        total += argument;
+        count += 1;
+    }
+    console.log(total / count); 
+};
+calcAverage(5, 6, 8, "a", "h");

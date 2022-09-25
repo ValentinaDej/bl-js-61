@@ -74,12 +74,30 @@
 ? Код має працювати для будь-якого масиву слів.
 ? Використовуйте цикл для вирішення задачі.
 */
-const genres = ["Jazz", "Blues", "rock'n'roll", "Country", "Reggy"];
-let smallestWord = genres[0];
+//const genres = ["Jazz", "Blues", "rock'n'roll", "Country", "Reggy"];
+//let smallestWord = genres[0];
 
-for (const word of genres) {
-  if (word.length < smallestWord.length) {
-    smallestWord = word;
-  }
+//for (const word of genres) {
+//  if (word.length < smallestWord.length) {
+//    smallestWord = word;
+//  }
+//}
+//console.log(smallestWord);
+
+/*
+? У нас є кілька масивів із зарплатами співробітників з
+? різних відділів, потрібно порахувати загальну суму зарплат
+*/
+
+// const managerSalaries = [1000, 1500, 2500, 4000, 5000];
+// const developersSalaries = [8000, 15000, 40000];
+
+const managerSalaries = [1000, 1500, 2500, 4000, 5000];
+const developersSalaries = [8000, 15000, 40000];
+const newSalery = developersSalaries.concat(managerSalaries);
+console.log(newSalery);
+let total = 0;
+for (const salery of newSalery) {
+  total += salery;
 }
-console.log(smallestWord);
+console.log(total);

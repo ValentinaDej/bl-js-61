@@ -31,6 +31,7 @@
 // const normalizedString = string.toLowerCase();
 // const normalizedNewString = "JS".toLowerCase();
 // console.log(normalizedString.indexOf(normalizedNewString));
+<<<<<<< Updated upstream
 
 /*
 ? Дано рядок, що складається із символів, наприклад, 'abcde'.
@@ -68,3 +69,13 @@ if (time >= 0 && time < 15) {
 } else {
   console.log("Багато годин пора спати!");
 }
+=======
+/*
+? У змінній min лежить число від 0 до 59.
+? Визначте, в яку чверть години потрапляє це число (у першу, другу, третю чи четверту).
+? [0 до 15) – перша чверть години
+? [15 до 30) – друга чверть години
+? [30 до 45) – третя чверть години
+? [45 до 60) – четверта чверть години
+*/
+>>>>>>> Stashed changes

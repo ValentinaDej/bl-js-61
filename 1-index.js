@@ -27,7 +27,24 @@
   ? Дізнайтеся, чи є в цьому рядку мова: 'JavaScript', або 'JS'?.
   ? Якщо є, дізнайтесь позицію на якій перебувати цей підрядок
 */
-const string = "HTML, CSS, JS, PHP, React, Vue, Node.js, C, C++";
-const normalizedString = string.toLowerCase();
-const normalizedNewString = "JS".toLowerCase();
-console.log(normalizedString.indexOf(normalizedNewString));
+// const string = "HTML, CSS, JS, PHP, React, Vue, Node.js, C, C++";
+// const normalizedString = string.toLowerCase();
+// const normalizedNewString = "JS".toLowerCase();
+// console.log(normalizedString.indexOf(normalizedNewString));
+
+/*
+? Дано рядок, що складається із символів, наприклад, 'abcde'.
+? Перевірте, що першим символом цього рядка є буква 'a'.
+? Якщо це так - виведіть 'так', інакше виведіть 'ні'.
+*/
+
+const string = "abcde";
+
+// if (string.startsWith("a")) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+const message = string.startsWith("a") ? true : false;
+console.log(message);

@@ -38,13 +38,33 @@
 ? Якщо це так - виведіть 'так', інакше виведіть 'ні'.
 */
 
-const string = "abcde";
+// const string = "abcde";
 
-// if (string.startsWith("a")) {
-//   console.log(true);
-// } else {
-//   console.log(false);
-// }
+// // if (string.startsWith("a")) {
+// //   console.log(true);
+// // } else {
+// //   console.log(false);
+// // }
 
-const message = string.startsWith("a") ? true : false;
-console.log(message);
+// const message = string.startsWith("a") ? true : false;
+// console.log(message);
+// /*
+// ? У змінній min лежить число від 0 до 59.
+// ? Визначте, в яку чверть години потрапляє це число (у першу, другу, третю чи четверту).
+// ? [0 до 15) – перша чверть години
+// ? [15 до 30) – друга чверть години
+// ? [30 до 45) –друга чверть години
+// ? [45 до 60) – друга чверть години
+// */
+const time = 72;
+if (time >= 0 && time < 15) {
+  console.log("перша чверть години");
+} else if (time >= 15 && time < 30) {
+  console.log("друга чверть години");
+} else if (time >= 30 && time < 45) {
+  console.log("третя чверть години");
+} else if (time >= 45 && time < 60) {
+  console.log("четверта чверть години");
+} else {
+  console.log("Багато годин пора спати!");
+}

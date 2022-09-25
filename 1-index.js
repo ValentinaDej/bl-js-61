@@ -92,12 +92,12 @@
 // const managerSalaries = [1000, 1500, 2500, 4000, 5000];
 // const developersSalaries = [8000, 15000, 40000];
 
-const managerSalaries = [1000, 1500, 2500, 4000, 5000];
-const developersSalaries = [8000, 15000, 40000];
-const newSalery = developersSalaries.concat(managerSalaries);
-console.log(newSalery);
-let total = 0;
-for (const salery of newSalery) {
-  total += salery;
-}
-console.log(total);
+// const managerSalaries = [1000, 1500, 2500, 4000, 5000];
+// const developersSalaries = [8000, 15000, 40000];
+// const newSalery = developersSalaries.concat(managerSalaries);
+// console.log(newSalery);
+// let total = 0;
+// for (const salery of newSalery) {
+//   total += salery;
+// }
+// console.log(total);

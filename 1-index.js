@@ -31,7 +31,6 @@
 // const normalizedString = string.toLowerCase();
 // const normalizedNewString = "JS".toLowerCase();
 // console.log(normalizedString.indexOf(normalizedNewString));
-<<<<<<< Updated upstream
 
 /*
 ? Дано рядок, що складається із символів, наприклад, 'abcde'.
@@ -57,25 +56,30 @@
 // ? [30 до 45) –друга чверть години
 // ? [45 до 60) – друга чверть години
 // */
-const time = 72;
-if (time >= 0 && time < 15) {
-  console.log("перша чверть години");
-} else if (time >= 15 && time < 30) {
-  console.log("друга чверть години");
-} else if (time >= 30 && time < 45) {
-  console.log("третя чверть години");
-} else if (time >= 45 && time < 60) {
-  console.log("четверта чверть години");
-} else {
-  console.log("Багато годин пора спати!");
-}
-=======
+// const time = 72;
+// if (time >= 0 && time < 15) {
+//   console.log("перша чверть години");
+// } else if (time >= 15 && time < 30) {
+//   console.log("друга чверть години");
+// } else if (time >= 30 && time < 45) {
+//   console.log("третя чверть години");
+// } else if (time >= 45 && time < 60) {
+//   console.log("четверта чверть години");
+// } else {
+//   console.log("Багато годин пора спати!");
+// }
+
 /*
-? У змінній min лежить число від 0 до 59.
-? Визначте, в яку чверть години потрапляє це число (у першу, другу, третю чи четверту).
-? [0 до 15) – перша чверть години
-? [15 до 30) – друга чверть години
-? [30 до 45) – третя чверть години
-? [45 до 60) – четверта чверть години
+? Напиши скрипт пошуку найменшого слова  у масиві.
+? Код має працювати для будь-якого масиву слів.
+? Використовуйте цикл для вирішення задачі.
 */
->>>>>>> Stashed changes
+const genres = ["Jazz", "Blues", "rock'n'roll", "Country", "Reggy"];
+let smallestWord = genres[0];
+
+for (const word of genres) {
+  if (word.length < smallestWord.length) {
+    smallestWord = word;
+  }
+}
+console.log(smallestWord);

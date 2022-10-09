@@ -265,31 +265,138 @@
 ? а також list зі значенням "default" якщо у partialContact немає такої властивості.
 */
 
-const generateId = function () {
-  return '_' + Math.random().toString(36).substr(2, 9);
+// const generateId = function () {
+//   return '_' + Math.random().toString(36).substr(2, 9);
+// };
+
+// function createContact(partialContact) {
+//   return  {
+//     list: "default",
+//     createdAt: Date.now(),
+//     id: generateId(),
+//     ...partialContact
+//   };
+
+// }
+// console.log(
+//   createContact({
+//     name: 'Mango',
+//     email: 'mango@mail.com',
+//     list: 'friends',
+//   })
+// );
+
+// console.log(
+//   createContact({
+//     name: 'Poly',
+//     email: 'poly@hotmail.com',
+//   })
+// );
+
+const people = [
+  {
+    name: "Alex",
+    know: ["Alex", "Jhon"],
+  },
+  {
+    name: "Eva",
+    know: ["Alex", "Jhon"],
+  },
+  {
+    name: "Ivan",
+    know: ["Jhon", "Eva"],
+  },
+  {
+    name: "Jhon",
+    know: [],
+  },
+];
+//нарцис  'Jhon'
+
+const people2 = [
+  {
+    name: "Alex",
+    know: ["Alex", "Jhon", "Eva"],
+  },
+  {
+    name: "Jhon",
+    know: ["Eva"],
+  },
+  {
+    name: "Eva",
+    know: [],
+  },
+  {
+    name: "Ivan",
+    know: ["Jhon", "Eva"],
+  },
+];
+//Нарцис Eva'
+
+const people3 = [
+  {
+    name: "Alex",
+    know: ["Alex", "Eva"],
+  },
+  {
+    name: "Jhon",
+    know: [],
+  },
+  {
+    name: "Eva",
+    know: ["Alex", "Jhon"],
+  },
+  {
+    name: "Ivan",
+    know: ["Jhon", "Eva"],
+  },
+];
+//немає нарциса
+
+const people4 = [
+  {
+    name: "Alex",
+    know: ["Alex", "Jhon"],
+  },
+  {
+    name: "Jhon",
+    know: ["Eva"],
+  },
+  {
+    name: "Eva",
+    know: ["Alex", "Jhon"],
+  },
+  {
+    name: "Ivan",
+    know: ["Jhon", "Eva"],
+  },
+];
+//немає нарциса'
+
+// //Нарциса знають всі, нарцис незнає нікого
+
+const findNartsys = function (array) {
+  let nartsysName = "";
+  for (const arr of array) {
+    if (arr.know.length === 0) {
+      nartsysName = arr.name;
+    }
+  }
+  if (nartsysName === "") {
+    console.log("Немає нарциса");
+    return;
+  }
+  for (const arr of array) {
+    if (arr.name === nartsysName) {
+      continue;
+    }
+    if (!arr.know.includes(nartsysName)) {
+      console.log("Немає нарциса");
+      return;
+    }
+  }
+
+  console.log(nartsysName);
 };
 
-function createContact(partialContact) {
-  return  {
-    list: "default",
-    createdAt: Date.now(),
-    id: generateId(),
-    ...partialContact
-  };
-  
-
-}
-console.log(
-  createContact({
-    name: 'Mango',
-    email: 'mango@mail.com',
-    list: 'friends',
-  })
-);
-
-console.log(
-  createContact({
-    name: 'Poly',
-    email: 'poly@hotmail.com',
-  })
-);
+findNartsys(people4);

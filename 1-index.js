@@ -293,110 +293,150 @@
 //   })
 // );
 
-const people = [
-  {
-    name: "Alex",
-    know: ["Alex", "Jhon"],
-  },
-  {
-    name: "Eva",
-    know: ["Alex", "Jhon"],
-  },
-  {
-    name: "Ivan",
-    know: ["Jhon", "Eva"],
-  },
-  {
-    name: "Jhon",
-    know: [],
-  },
-];
-//нарцис  'Jhon'
+// const people = [
+//   {
+//     name: "Alex",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Eva",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Eva"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: [],
+//   },
+// ];
+// //нарцис  'Jhon'
 
-const people2 = [
-  {
-    name: "Alex",
-    know: ["Alex", "Jhon", "Eva"],
-  },
-  {
-    name: "Jhon",
-    know: ["Eva"],
-  },
-  {
-    name: "Eva",
-    know: [],
-  },
-  {
-    name: "Ivan",
-    know: ["Jhon", "Eva"],
-  },
-];
-//Нарцис Eva'
+// const people2 = [
+//   {
+//     name: "Alex",
+//     know: ["Alex", "Jhon", "Eva"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: ["Eva"],
+//   },
+//   {
+//     name: "Eva",
+//     know: [],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Eva"],
+//   },
+// ];
+// //Нарцис Eva'
 
-const people3 = [
-  {
-    name: "Alex",
-    know: ["Alex", "Eva"],
-  },
-  {
-    name: "Jhon",
-    know: [],
-  },
-  {
-    name: "Eva",
-    know: ["Alex", "Jhon"],
-  },
-  {
-    name: "Ivan",
-    know: ["Jhon", "Eva"],
-  },
-];
-//немає нарциса
+// const people3 = [
+//   {
+//     name: "Alex",
+//     know: ["Alex", "Eva"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: [],
+//   },
+//   {
+//     name: "Eva",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Eva"],
+//   },
+// ];
+// //немає нарциса
 
-const people4 = [
-  {
-    name: "Alex",
-    know: ["Alex", "Jhon"],
-  },
-  {
-    name: "Jhon",
-    know: ["Eva"],
-  },
-  {
-    name: "Eva",
-    know: ["Alex", "Jhon"],
-  },
-  {
-    name: "Ivan",
-    know: ["Jhon", "Eva"],
-  },
-];
-//немає нарциса'
+// const people4 = [
+//   {
+//     name: "Alex",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: ["Eva"],
+//   },
+//   {
+//     name: "Eva",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Eva"],
+//   },
+// ];
+// //немає нарциса'
 
-// //Нарциса знають всі, нарцис незнає нікого
+// // //Нарциса знають всі, нарцис незнає нікого
 
-const findNartsys = function (array) {
-  let nartsysName = "";
-  for (const arr of array) {
-    if (arr.know.length === 0) {
-      nartsysName = arr.name;
-    }
-  }
-  if (nartsysName === "") {
-    console.log("Немає нарциса");
-    return;
-  }
-  for (const arr of array) {
-    if (arr.name === nartsysName) {
-      continue;
-    }
-    if (!arr.know.includes(nartsysName)) {
-      console.log("Немає нарциса");
-      return;
-    }
-  }
+// const findNartsys = function (array) {
+//   let nartsysName = "";
+//   for (const arr of array) {
+//     if (arr.know.length === 0) {
+//       nartsysName = arr.name;
+//     }
+//   }
+//   if (nartsysName === "") {
+//     console.log("Немає нарциса");
+//     return;
+//   }
+//   for (const arr of array) {
+//     if (arr.name === nartsysName) {
+//       continue;
+//     }
+//     if (!arr.know.includes(nartsysName)) {
+//       console.log("Немає нарциса");
+//       return;
+//     }
+//   }
 
-  console.log(nartsysName);
+//   console.log(nartsysName);
+// };
+
+// findNartsys(people4);
+
+
+/*
+? Напиши скрипт, який для об'єкта user послідовно:
+? додає поле mood зі значенням 'happy'
+? замінює значення hobby на 'skydiving'
+? замінює значення premium на false
+? виводить вміст об'єкта user у форматі ключ: значення використовуючи Object.keys() і for...of
+*/
+
+const user = {
+  name: 'Mango',
+  age: 20,
+  hobby: 'html',
+  premium: true,
 };
 
-findNartsys(people4);
+// user.mood = "happy";
+
+// user["mood"] = "happy";
+
+const userMood = "mood";
+user[userMood] = "happy";
+
+// user.hobby = 'skydiving';
+// user["hobby"] = 'skydiving';
+
+const userHobby = "hobby";
+user[userHobby] = 'skydiving';
+
+delete user.premium;
+
+delete user["age"];
+
+for (const key of Object.keys(user)) {
+  console.log(key);
+
+}
+
+console.log(user);

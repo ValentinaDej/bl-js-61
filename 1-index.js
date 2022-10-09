@@ -107,18 +107,37 @@
 ? За умови, що усі аругменти будуть лише числами.
 ? Додай перевірку, що аргументами можуть бути не числа
 */
-function calcAverage() {
-    let total = 0;
-    let count = 0;
+// function calcAverage() {
+//     let total = 0;
+//     let count = 0;
 
-    for (const argument of arguments){
-        if (typeof argument !== "number") {
-            continue
-        }
-        console.log(typeof argument)
-        total += argument;
-        count += 1;
-    }
-    console.log(total / count); 
-};
-calcAverage(5, 6, 8, "a", "h");
+//     for (const argument of arguments){
+//         if (typeof argument !== "number") {
+//             continue
+//         }
+//         console.log(typeof argument)
+//         total += argument;
+//         count += 1;
+//     }
+//     console.log(total / count);
+// };
+// calcAverage(5, 6, 8, "a", "h");
+
+/*
+? Створіть масив genres з елементами Jazz і Blues.
+? Додайте "rock'n'roll" до кінця.
+? Виведіть у консоль перший елемент масиву.
+? Виведіть у консоль останній елемент масиву. Код має працювати для масиву довільної довжини.
+? Видаліть перший елемент та виведіть його в консоль.
+? Вставте "Country" та "Reggy" на початок масиву.
+ */
+// const array = ['Jass', 'Blues']
+
+// array.push("rock'n'roll");
+// // console.log(array[0]);
+// // console.log(array[array.length - 1]);
+// // console.log(array.splice(0, 1));
+// // console.log(array.shift());
+
+// console.log(array.splice(0, 0,"Country", "Reggy"));
+// console.log(array);

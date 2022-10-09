@@ -159,13 +159,57 @@
 ? Код має працювати для будь-якого масиву рядків.
 ? Використовуйте цикл для вирішення задачі.
 */
-const genres = ['Jazz', 'Blues', "rock'n'roll", 'Country', 'Reggy'];
+// const genres = ['Jazz', 'Blues', "rock'n'roll", 'Country', 'Reggy'];
 
-let longWord = genres[0];
+// let longWord = genres[0];
 
-for (const genre of genres) {
-  if (genre.length > longWord.length) {
-  longWord = genre;
-  }
-}
-console.log(longWord)
+// for (const genre of genres) {
+//   if (genre.length > longWord.length) {
+//   longWord = genre;
+//   }
+// }
+// console.log(longWord)
+
+
+
+//task - 24
+/*
+? У нас є кілька масивів із зарплатами співробітників з
+? різних відділів, потрібно порахувати загальну суму зарплат
+*/
+
+// const managerSalaries = [1000, 1500, 2500, 4000, 5000];
+// const developersSalaries = [8000, 40000, 15000];
+
+// const managerSalaries = [1000, 1500, 2500, 4000, 5000];
+// const developersSalaries = [8000, 40000, 15000];
+
+//1
+// let totalSalary = 0;
+// for (let i = 0; i < managerSalaries.length; i += 1) {
+//   totalSalary += managerSalaries[i];
+// }
+
+// for (let i = 0; i < developersSalaries.length; i++){
+//   totalSalary += developersSalaries[i];
+// }
+
+
+// console.log(totalSalary);
+
+//2
+
+// const newSalaryArr = managerSalaries.concat(developersSalaries);
+// console.log(newSalaryArr);
+
+// const newSalaryArr = [...developersSalaries, ...managerSalaries];
+
+// let totalSalary = 0;
+// for (let i = 0; i < newSalaryArr.length; i++) {
+//   totalSalary += newSalaryArr[i];
+// }
+
+// console.log(totalSalary);
+
+
+//The next one

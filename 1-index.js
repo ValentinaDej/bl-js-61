@@ -238,15 +238,15 @@
 // з властивостями companyName та stock та виводила репорт
 // ? про кількість товарів на складі будь-якої компанії.
 // *
-console.log(
-  getStockReport({
-    companyName: "Cyberdyne Systems",
-    stock: {
-      repairBots: 150,
-      defenceBots: 50,
-    },
-  })
-); //"// console.log(
+// console.log(
+//   getStockReport({
+//     companyName: "Cyberdyne Systems",
+//     stock: {
+//       repairBots: 150,
+//       defenceBots: 50,
+//     },
+//   })
+// ); //"// console.log(
 //   getStockReport({
 //     companyName: 'Cyberdyne Systems',
 //     stock: {
@@ -255,7 +255,41 @@ console.log(
 //     },
 //   })
 // ); //"Cyberdyne Systems has 200 items in stock"
-function getStockReport({ companyName, stock: { repairBots, defenceBots } }) {
-  return `${companyName} has ${repairBots + defenceBots} items in stock`;
-}
+// function getStockReport({ companyName, stock: { repairBots, defenceBots } }) {
+//   return `${companyName} has ${repairBots + defenceBots} items in stock`;
+// }
 // 27
+/*
+? Напиши функцію createContact(partialContact) так,
+? щоб вона повертала новий об'єкт контакту з доданими властивостями id і createdAt,
+? а також list зі значенням "default" якщо у partialContact немає такої властивості.
+*/
+
+const generateId = function () {
+  return '_' + Math.random().toString(36).substr(2, 9);
+};
+
+function createContact(partialContact) {
+  return  {
+    list: "default",
+    createdAt: Date.now(),
+    id: generateId(),
+    ...partialContact
+  };
+  
+
+}
+console.log(
+  createContact({
+    name: 'Mango',
+    email: 'mango@mail.com',
+    list: 'friends',
+  })
+);
+
+console.log(
+  createContact({
+    name: 'Poly',
+    email: 'poly@hotmail.com',
+  })
+);

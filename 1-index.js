@@ -131,6 +131,13 @@
 ? Видаліть перший елемент та виведіть його в консоль.
 ? Вставте "Country" та "Reggy" на початок масиву.
  */
-const array = [Jass, ]
+// const array = ['Jass', 'Blues']
 
-function 
+// array.push("rock'n'roll");
+// // console.log(array[0]);
+// // console.log(array[array.length - 1]);
+// // console.log(array.splice(0, 1));
+// // console.log(array.shift());
+
+// console.log(array.splice(0, 0,"Country", "Reggy"));
+// console.log(array);

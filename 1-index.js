@@ -170,8 +170,6 @@
 // }
 // console.log(longWord)
 
-
-
 //task - 24
 /*
 ? У нас є кілька масивів із зарплатами співробітників з
@@ -194,7 +192,6 @@
 //   totalSalary += developersSalaries[i];
 // }
 
-
 // console.log(totalSalary);
 
 //2
@@ -211,5 +208,26 @@
 
 // console.log(totalSalary);
 
-
 //The next one
+
+/*
+? Напишіть ф-цію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та рядок під назвою каменю.
+? Ф-ція рахує і повертає загальну вартість каміння з таким ім'ям.
+*/
+
+// const stones = [
+//   { name: "Смарагд", price: 1300, quantity: 4 },
+//   { name: "Діамант", price: 2700, quantity: 3 },
+//   { name: "Сапфір", price: 400, quantity: 7 },
+//   { name: "Щебінь", price: 200, quantity: 2 },
+// ];
+
+// function calcTotalPrice(stones, stoneName) {
+//   for (const { name, price, quantity } of stones) {
+//     if (name === stoneName) {
+//       console.log(price * quantity);
+//     }
+//   }
+// }
+
+// calcTotalPrice(stones, "Смарагд");

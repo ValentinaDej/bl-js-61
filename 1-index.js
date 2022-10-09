@@ -231,3 +231,31 @@
 // }
 
 // calcTotalPrice(stones, "Смарагд");
+// 26
+//
+// ? Напиши функцію getStockReport(companyName, stock),
+// щоб вона приймала об'єкт параметрів
+// з властивостями companyName та stock та виводила репорт
+// ? про кількість товарів на складі будь-якої компанії.
+// *
+console.log(
+  getStockReport({
+    companyName: "Cyberdyne Systems",
+    stock: {
+      repairBots: 150,
+      defenceBots: 50,
+    },
+  })
+); //"// console.log(
+//   getStockReport({
+//     companyName: 'Cyberdyne Systems',
+//     stock: {
+//       repairBots: 150,
+//       defenceBots: 50,
+//     },
+//   })
+// ); //"Cyberdyne Systems has 200 items in stock"
+function getStockReport({ companyName, stock: { repairBots, defenceBots } }) {
+  return `${companyName} has ${repairBots + defenceBots} items in stock`;
+}
+// 27

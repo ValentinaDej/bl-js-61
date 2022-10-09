@@ -148,8 +148,24 @@
 ? Нумерація елементів має починатися з одиниці.
 */
 
-const fruits = ['🍎', '🍇', '🍑', '🍌', '🍋'];
+// const fruits = ['🍎', '🍇', '🍑', '🍌', '🍋'];
 
-for (i = 0; i < fruits.length; i++) {
-    console.log(`${i + 1}: ${fruits[i]}`);
+// for (i = 0; i < fruits.length; i++) {
+//     console.log(`${i + 1}: ${fruits[i]}`);
+// }
+
+/*
+? Напиши скрипт пошуку найдовшого слова в масиві.
+? Код має працювати для будь-якого масиву рядків.
+? Використовуйте цикл для вирішення задачі.
+*/
+const genres = ['Jazz', 'Blues', "rock'n'roll", 'Country', 'Reggy'];
+
+let longWord = genres[0];
+
+for (const genre of genres) {
+  if (genre.length > longWord.length) {
+  longWord = genre;
+  }
 }
+console.log(longWord)

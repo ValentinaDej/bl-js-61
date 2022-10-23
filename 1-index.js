@@ -462,6 +462,20 @@
 // console.log(newArrey);
 // ? Відфільтруйте масив, щоб залишилися тільки парні
 
-const numbers = [1, 2, 3, 4, 5, 6];
-const filterNumbers = numbers.filter((number) => !(number % 2));
-console.log(filterNumbers);
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const filterNumbers = numbers.filter((number) => !(number % 2));
+// console.log(filterNumbers);
+
+/*
+? Відфільтруйте масив heroes за ключем об'єкта franchise.
+*/
+
+const heroes = [
+  { name: "Batman", franchise: "DC" },
+  { name: "Ironman", franchise: "Marvel" },
+  { name: "Thor", franchise: "Marvel" },
+  { name: "Superman", franchise: "DC" },
+];
+
+const franchiseArray = heroes.filter(({ franchise }) => franchise === "Marvel");
+console.log(franchiseArray);

@@ -410,33 +410,43 @@
 ? виводить вміст об'єкта user у форматі ключ: значення використовуючи Object.keys() і for...of
 */
 
-const user = {
-  name: 'Mango',
-  age: 20,
-  hobby: 'html',
-  premium: true,
-};
+// const user = {
+//   name: 'Mango',
+//   age: 20,
+//   hobby: 'html',
+//   premium: true,
+// };
 
 // user.mood = "happy";
 
 // user["mood"] = "happy";
 
-const userMood = "mood";
-user[userMood] = "happy";
+// const userMood = "mood";
+// user[userMood] = "happy";
 
-// user.hobby = 'skydiving';
-// user["hobby"] = 'skydiving';
+// // user.hobby = 'skydiving';
+// // user["hobby"] = 'skydiving';
 
-const userHobby = "hobby";
-user[userHobby] = 'skydiving';
+// const userHobby = "hobby";
+// user[userHobby] = 'skydiving';
 
-delete user.premium;
+// delete user.premium;
 
-delete user["age"];
+// delete user["age"];
 
-for (const key of Object.keys(user)) {
-  console.log(key);
+// for (const key of Object.keys(user)) {
+//   console.log(key);
 
-}
+// }
 
-console.log(user);
+// console.log(user);
+
+/*
+? Код отримує з масиву рядків новий масив, що містить довжини рядків
+*/
+const wordsArr = ['Існує', 'життя', 'на', 'Марсі'];
+
+const lengthWord = wordsArr.map((item) => item.length);
+
+console.log(lengthWord);
+

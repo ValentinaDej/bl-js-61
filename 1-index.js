@@ -453,10 +453,15 @@
 ? Створення масиву значень Фаренгейта із масиву значень Цельсія
 ? Для переведення з Цельсій до Фаренгейтів потрібна формула. F = C * 1.8 + 32
 */
-const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
+// const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
 
-const newArrey = celsius.map((item) => {
-  return item * 1.8 + 32;
-});
+// const newArrey = celsius.map((item) => {
+//   return item * 1.8 + 32;
+// });
 
-console.log(newArrey);
+// console.log(newArrey);
+// ? Відфільтруйте масив, щоб залишилися тільки парні
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const filterNumbers = numbers.filter((number) => !(number % 2));
+console.log(filterNumbers);

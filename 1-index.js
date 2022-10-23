@@ -582,16 +582,32 @@ const cars = [
 
 // console.log(getCarByModel(cars, "Accord"));
 
-const planets = ["Земля", "Марс", "Венера", "Юпітер"];
+// const planets = ["Земля", "Марс", "Венера", "Юпітер"];
 
-function ownMap(array, callback) {
+// function ownMap(array, callback) {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     newArray.push(callback(array[i], i, array));
+//   }
+//   return newArray;
+// }
+
+// const planetsInUpperCase = ownMap(planets, (planet) => planet.toUpperCase());
+
+// console.log(planetsInUpperCase);
+
+const values = [51, -3, 27, 100500, 21, 68, -42, -37, 100001];
+
+const positiveValues = ownFilter(values, (value) => value >= 0);
+
+function ownFilter(array, callback) {
   const newArray = [];
   for (let i = 0; i < array.length; i += 1) {
-    newArray.push(callback(array[i], i, array));
+    console.log(callback);
+    if (callback(array[i], i, array)) {
+      newArray.push(array[i]);
+    }
   }
   return newArray;
 }
-
-const planetsInUpperCase = ownMap(planets, (planet) => planet.toUpperCase());
-
-console.log(planetsInUpperCase);
+console.log(positiveValues);

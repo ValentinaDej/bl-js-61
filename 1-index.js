@@ -563,7 +563,7 @@ const cars = [
 ? збігається із значенням параметра type.
 */
 // function getCarsWithType(array, type) {
-//  return array.filter((item) => item.type === type) 
+//  return array.filter((item) => item.type === type)
 // };
 
 // console.log(getCarsWithType(cars, 'suv'));
@@ -577,3 +577,8 @@ const cars = [
 
 // console.log(uniqueNums);
 
+// function getCarByModel(cars, model) {
+//   return cars.find(car => car.model.toLowerCase() === model.toLowerCase());
+// }
+
+// console.log(getCarByModel(cars, "Accord"));

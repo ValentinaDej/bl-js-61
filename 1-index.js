@@ -567,3 +567,13 @@ const cars = [
 // };
 
 // console.log(getCarsWithType(cars, 'suv'));
+
+// // ?Залишити тільки унікальні числа
+// const numbers = [1, 2, 3, 3, 2, 1, 4, 5, 6, 4];
+
+// // const uniqueNums = numbers.filter((num, index, array) => array.indexOf(num) === index);
+
+// const uniqueNums = numbers.reduce((acc, num) => acc.includes(num)? acc : [...acc, num], []);
+
+// console.log(uniqueNums);
+

@@ -556,7 +556,6 @@ const cars = [
 // console.log(filterByPrice(cars, 25000));
 // 3-6
 
-
 // 3-6
 /*
 ?Нехай функція getCarsWithType повертає масив автомобілів, тип яких
@@ -582,3 +581,17 @@ const cars = [
 // }
 
 // console.log(getCarByModel(cars, "Accord"));
+
+const planets = ["Земля", "Марс", "Венера", "Юпітер"];
+
+function ownMap(array, callback) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+    newArray.push(callback(array[i], i, array));
+  }
+  return newArray;
+}
+
+const planetsInUpperCase = ownMap(planets, (planet) => planet.toUpperCase());
+
+console.log(planetsInUpperCase);

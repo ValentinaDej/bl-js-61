@@ -401,7 +401,6 @@
 
 // findNartsys(people4);
 
-
 /*
 ? Напиши скрипт, який для об'єкта user послідовно:
 ? додає поле mood зі значенням 'happy'
@@ -444,9 +443,20 @@
 /*
 ? Код отримує з масиву рядків новий масив, що містить довжини рядків
 */
-const wordsArr = ['Існує', 'життя', 'на', 'Марсі'];
+// const wordsArr = ['Існує', 'життя', 'на', 'Марсі'];
 
-const lengthWord = wordsArr.map((item) => item.length);
+// const lengthWord = wordsArr.map((item) => item.length);
 
-console.log(lengthWord);
+// console.log(lengthWord);
 
+/*
+? Створення масиву значень Фаренгейта із масиву значень Цельсія
+? Для переведення з Цельсій до Фаренгейтів потрібна формула. F = C * 1.8 + 32
+*/
+const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
+
+const newArrey = celsius.map((item) => {
+  return item * 1.8 + 32;
+});
+
+console.log(newArrey);

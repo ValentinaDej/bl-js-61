@@ -596,18 +596,36 @@ const cars = [
 
 // console.log(planetsInUpperCase);
 
-const values = [51, -3, 27, 100500, 21, 68, -42, -37, 100001];
+// const values = [51, -3, 27, 100500, 21, 68, -42, -37, 100001];
 
-const positiveValues = ownFilter(values, (value) => value >= 0);
+// const positiveValues = ownFilter(values, (value) => value >= 0);
 
-function ownFilter(array, callback) {
-  const newArray = [];
-  for (let i = 0; i < array.length; i += 1) {
-    console.log(callback);
+// function ownFilter(array, callback) {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     console.log(callback);
+//     if (callback(array[i], i, array)) {
+//       newArray.push(array[i]);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(positiveValues);
+
+const colorPickerOptions = [
+  { label: "red", color: "#F44336" },
+  { label: "green", color: "#4CAF50" },
+  { label: "blue", color: "#2196F3" },
+  { label: "pink", color: "#E91E63" },
+  { label: "indigo", color: "#3F51B5" },
+];
+
+console.log(ownFind(colorPickerOptions, (option) => option.label === "blue"));
+
+function ownFind(array, callback) {
+  for (let i = 0; i <= array.length; i += 1) {
     if (callback(array[i], i, array)) {
-      newArray.push(array[i]);
+      return array[i];
     }
   }
-  return newArray;
 }
-console.log(positiveValues);

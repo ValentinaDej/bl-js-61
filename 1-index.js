@@ -657,29 +657,29 @@
 //* Парним li вказати червоний фон, непарним - синій
 //Для виконання завдання використовуйте createElement
 
-const listEl = document.createElement("ol");
-const addbuttonEl = document.createElement("button");
-addbuttonEl.textContent = "add";
-const removebuttonEl = document.createElement("button");
-removebuttonEl.textContent = "remove";
-const creatinputEl = document.createElement("input");
+// const listEl = document.createElement("ol");
+// const addbuttonEl = document.createElement("button");
+// addbuttonEl.textContent = "add";
+// const removebuttonEl = document.createElement("button");
+// removebuttonEl.textContent = "remove";
+// const creatinputEl = document.createElement("input");
 
-document.body.append(addbuttonEl, removebuttonEl, creatinputEl, listEl);
+// document.body.append(addbuttonEl, removebuttonEl, creatinputEl, listEl);
 
-addbuttonEl.addEventListener("click", () => {
-  const item = document.createElement("li");
-  item.textContent = creatinputEl.value ? creatinputEl.value : "defult";
-  listEl.append(item);
-  creatinputEl.value = "";
-  console.log(listEl.children.length);
+// addbuttonEl.addEventListener("click", () => {
+//   const item = document.createElement("li");
+//   item.textContent = creatinputEl.value ? creatinputEl.value : "defult";
+//   listEl.append(item);
+//   creatinputEl.value = "";
+//   console.log(listEl.children.length);
 
-  const isEven = listEl.children.length % 2 === 0;
-  item.style.background = isEven ? "yellow" : "blue";
-});
+//   const isEven = listEl.children.length % 2 === 0;
+//   item.style.background = isEven ? "yellow" : "blue";
+// });
 
-removebuttonEl.addEventListener("click", () => {
-  if (!listEl.hasChildNodes()) {
-    return;
-  }
-  listEl.lastElementChild.remove();
-});
+// removebuttonEl.addEventListener("click", () => {
+//   if (!listEl.hasChildNodes()) {
+//     return;
+//   }
+//   listEl.lastElementChild.remove();
+// });

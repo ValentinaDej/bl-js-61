@@ -9006,12 +9006,31 @@ const listEl = document.querySelector(".suggestions");
 
 const onInputWrite = (event) => {
   const userInput = event.target.value.toLowerCase().trim();
+  if (userInput === '') {
+    const markUp = `<li>Filter for a city</li>
+    <li>or a state</li>`;
+    listEl.innerHTML = markUp;
+    return
+  }
   const newArray = cityArray.filter(({ city }) =>
     city.toLowerCase().includes(userInput)
   );
-  console.log(newArray);
+  if (newArray.length === 0) {
+    const markUp = `<li>
+    <span class="name">${event.target.value} NOT FOUND</span>
+    </li>`;
+    listEl.innerHTML = markUp;
+    return 
+  }
+  
+  
+  listEl.innerHTML = createCityList(newArray, userInput);
+  
+};
+
+function createCityList (array, userInput) {
   const regex = new RegExp(userInput, "gi");
-  const markUp = newArray
+  return array
     .map((element) => {
       const city = element.city.replace(
         regex,
@@ -9026,9 +9045,7 @@ const onInputWrite = (event) => {
   </li>`;
     })
     .join("");
-  listEl.innerHTML = markUp;
-  console.log(regex);
-};
+}
 
 inputEl.addEventListener("input", onInputWrite);
 

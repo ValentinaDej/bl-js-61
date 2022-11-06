@@ -630,23 +630,55 @@
 //   }
 // }
 
-const students = [
-  { name: "Манго", score: 80 },
-  { name: "Поли", score: 50 },
-  { name: "Аякс", score: 30 },
-  { name: "Киви", score: 90 },
-  { name: "Хьюстон", score: 60 },
-];
+// const students = [
+//   { name: "Манго", score: 80 },
+//   { name: "Поли", score: 50 },
+//   { name: "Аякс", score: 30 },
+//   { name: "Киви", score: 90 },
+//   { name: "Хьюстон", score: 60 },
+// ];
 
-function ownReduce(array, callback, initialValue) {
-  for (let i = 0; i < array.length; i += 1) {
-    initialValue = callback(initialValue, array[i], i, array);
-  }
-  return initialValue;
-}
+// function ownReduce(array, callback, initialValue) {
+//   for (let i = 0; i < array.length; i += 1) {
+//     initialValue = callback(initialValue, array[i], i, array);
+//   }
+//   return initialValue;
+// }
 
 // const totalScore = ownReduce(students, (acc, item) => acc + item.score, 0);
 
-const totalScore = ownReduce(students, (acc, item) => [...acc, item.name], []);
+// const totalScore = ownReduce(students, (acc, item) => [...acc, item.name], []);
 
-console.log(totalScore);
+// console.log(totalScore);
+
+
+// Створити маркований список.
+//Створити кнопки "Add" "Remove", які змінюватимуть склад списку
+//Створити input з якого будемо отримувати значення, яке буде в li
+//* Парним li вказати червоний фон, непарним - синій
+//Для виконання завдання використовуйте createElement
+
+const listEl = document.createElement('ol');
+const addbuttonEl = document.createElement('button');
+addbuttonEl.textContent = 'add';
+const removebuttonEl = document.createElement('button');
+removebuttonEl.textContent = 'remove';
+const creatinputEl = document.createElement('input');
+
+document.body.append(addbuttonEl, removebuttonEl, creatinputEl, listEl);
+
+addbuttonEl.addEventListener('click', () => {
+  const item = document.createElement('li');
+  item.textContent = creatinputEl.value ? creatinputEl.value : 'defult';
+  listEl.append(item);
+  creatinputEl.value = '';
+  console.log(listEl.children.length);
+
+
+  const isEven = listEl.children.length % 2 === 0;
+  item.style.background = isEven ? 'yellow' : 'blue';
+  
+})
+
+
+
